@@ -1,3 +1,7 @@
+.categories{
+    padding-bottom: 5rem;
+}
+
 :root {
     --primary: #1977cc;
     --secondary: #3fbbc0;
@@ -38,6 +42,8 @@
     
 }
 .recentarticle-side{
+    padding-top: 2rem;
+    padding-right: 2rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -46,6 +52,8 @@
 }
 
 .recentarticle-main{
+    padding-top: 2rem;
+    padding-right: 2rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -164,6 +172,18 @@ body{
     text-align: center;
     border-radius: 30px;
 }
+
+.see_more_categories a{
+    width: 100%;
+    float: left;
+    font-size: 10px;
+    color: var(--light);
+    background-color: var(--primary);
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 20px;
+}
+
 .see_more a:hover{
     color: #ffffff;
     background-color:var(--purple);
@@ -179,6 +199,7 @@ body{
     padding-top: 0.75rem;
     
 }
+
 .see_all{
     width: 20%;
     float: right;
