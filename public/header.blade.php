@@ -40,19 +40,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Contacts</a>
+                      <a class="nav-link" href="/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Tools</a>
+                      <a class="nav-link" href="aboutus">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link" href="/articles">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Education</a>
+                        <a class="nav-link" href="/education">Education</a>
                     </li>
                   </ul>
                   <form class="d-flex" role="search">
@@ -63,17 +63,6 @@
             </div>
         </nav>
 
-        <dIv class="intro-image">
-            <img src="/imgs/logo.png" alt="Error" class="img-fluid">
-        </dIv>
-
-        <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>"It is complicated knowing where to go for reliable information in clinical practice"</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Jodi,<cite title="Source Title">NP Student</cite>
-            </figcaption>
-          </figure>
+        
     </body>
 </html>
