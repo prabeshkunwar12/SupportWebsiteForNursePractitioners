@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
+use function PHPUnit\Framework\isNull;
+
 class PostsController extends Controller
 {
     /**
@@ -71,7 +73,22 @@ class PostsController extends Controller
             else
             $post = $posts[0];
         }
+
+        
         return $post;
+    }
+
+    public function getMostViewedPostContent(int $postNum){
+        
+        $post = $this->getMostViewedPost($postNum);
+
+        //If no articles found
+        if(!$post)
+            return "Default Content";
+        
+        //$post->incrementViewCount();
+        return $post->content;
+    
     }
 
     public function getRecentPostName(int $articleNum){
@@ -93,7 +110,8 @@ class PostsController extends Controller
         if(!$post)
             return "Default Content";
         
-        $post->incrementViewCount();
+        
+        //$post->incrementViewCount();
         return $post->content;
     
     }

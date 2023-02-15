@@ -259,7 +259,7 @@ setcookie('name1',2,600);
         </div>
         <div class="row">
             <div class = "recentarticle-main">
-                <a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(1));?>">
                     <div class="recentarticle-img">
                     <img src = "../imgs/wellness-health-beauty.webp" >
                     </div>
@@ -269,13 +269,13 @@ setcookie('name1',2,600);
                     </a>
                             
                     <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">SEE MORE</a></div>
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(1));?>">SEE MORE</a></div>
                     </div>    
                     
             
             </div>  
             <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getMostViewedPost(2)->content);?>">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(2));?>">
                     <div class="recentarticle-img">
                     <img src = "../imgs/wellness-health-beauty.webp" >
                     </div>
@@ -285,14 +285,14 @@ setcookie('name1',2,600);
                     </a>
                             
                     <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">SEE MORE</a></div>
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(2));?>">SEE MORE</a></div>
                     </div>    
                     
             
             </div>
             
             <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getMostViewedPost(2)->content);?>">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(3));?>">
                     <div class="recentarticle-img">
                     <img src = "../imgs/wellness-health-beauty.webp" >
                     </div>
@@ -302,13 +302,13 @@ setcookie('name1',2,600);
                     </a>
                             
                     <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">SEE MORE</a></div>
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(3));?>">SEE MORE</a></div>
                     </div>    
                     
             
             </div>
             <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getMostViewedPost(2)->content);?>">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(4));?>">
                     <div class="recentarticle-img">
                     <img src = "../imgs/wellness-health-beauty.webp" >
                     </div>
@@ -318,13 +318,13 @@ setcookie('name1',2,600);
                     </a>
                             
                     <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">SEE MORE</a></div>
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(4));?>">SEE MORE</a></div>
                     </div>    
                     
             
             </div>
             <div class = "recentarticle-main vanish">
-                <a href="<?php echo ("http://".($postCon)->getMostViewedPost(2)->content);?>">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(5));?>">
                     <div class="recentarticle-img">
                     <img src = "../imgs/wellness-health-beauty.webp" >
                     </div>
@@ -334,7 +334,7 @@ setcookie('name1',2,600);
                     </a>
                             
                     <div class="seemore_main">
-                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPost(1)->content);?>">SEE MORE</a></div>
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(5));?>">SEE MORE</a></div>
                     </div>    
                     
             
