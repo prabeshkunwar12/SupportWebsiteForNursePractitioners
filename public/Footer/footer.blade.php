@@ -4,23 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="Footer/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="Footer/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Footer/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="Footer/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="Footer/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="Footer/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="Footer/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="Footer/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/style_footer.css" rel="stylesheet">
+  <link href="css/style-footer.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,11 +49,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">Topics</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Contact</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Feedback</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/aboutus">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/articles">Articles</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/education">Education</a></li>
             </ul>
           </div>
 

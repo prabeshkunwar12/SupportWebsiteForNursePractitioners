@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('categoryId');
             $table->string('title');
             $table->mediumText('content');
+            $table->integer('view_count')->default(0);
             $table->timestamps();
         });
     }

@@ -2,9 +2,13 @@
 namespace resources\views;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostsController;
+
 @include ('bootstrapcdn.blade.php');
 
 $homeCon = new HomeController();
+$postCon = new PostsController();
+setcookie('name1',2,600);
 ?>
 <!DOCTYPE HTML>
     <html>
@@ -16,52 +20,113 @@ $homeCon = new HomeController();
     </head>
 
     <body>
-        <?php @include 'header.blade.php' ?>
+        <?php @include 'header.blade.php'?>
 
+        <div class="intro-image">
+            <img src="/imgs/logo.png" alt="Error" class="img-fluid">
+        </div>
+
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <p>"It is complicated knowing where to go for reliable information in clinical practice"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Jodi,<cite title="Source Title">NP Student</cite>
+            </figcaption>
+          </figure>
+          
         <!-- Recently Added Articles -->
         <div>
             <div class = "container recentarticlessection">
                 <div class="recentarticlesheader">
                     <h3>
-                        <b>Recent Articles</b>
+                        <b>Recent Posts</b>
                     </h3>
                     <div class="seeall_main">
-                            <div class="see_all"><a href="/education">SHOW ALL</a></div>
+                            <div class="see_all"><a href="/articles">SHOW ALL</a></div>
                     </div>
-                    <p>Take a Look at our Recent Articles, Vetted and Approved by Medical Professionals! </p>
+                    <p>Take a Look at our Recent Posts, Vetted and Approved by Medical Professionals! </p>
+                    <hr>
                 </div>
-                    
+                
                     <div class="row">
-                        <div class = "col recentarticle-side">
-                            <a href = <?php echo ("http://".($homeCon)->getRecentArticleContent(0));?> >
-                                <h5>Whats New In Medicine <?php echo (($homeCon)->getRecentArticleName(0));?></h5>
+                        <div class = "recentarticle-main ">
+                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(1));?>">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                A look at the effects of smoking
+                            </div>
                             </a>
-                            <img src = "../imgs/1800ss_getty_rf_doctor_examining_patients_skin_magnifying_glass.webp" >
+                            
                             <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($homeCon)->getRecentArticleContent(0));?>">SEE MORE</a></div>
+                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(1));?>">SEE MORE</a></div>
                             </div>
                             
                         </div>
-                        <div class = "col recentarticle-main" >
-                            <a href = <?php echo ("http://".($homeCon)->getRecentArticleContent(1));?> >
-                                <h5>New Discoveries In Fitness <?php echo (($homeCon)->getRecentArticleName(1));?></h5>
+                        <div class = "recentarticle-main vanish">
+                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(2));?>">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                How yoga can benefit your heart
+                            </div>
                             </a>
-                            <img src="../imgs/1800x1200_10_tips_for_maintaining_a_kickass_workout_schedule_slideshow.webp">
+                            
                             <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($homeCon)->getRecentArticleContent(1));?>">SEE MORE</a></div>
+                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(2));?>">SEE MORE</a></div>
                             </div>
                             
                         </div>
-                        <div class = "col recentarticle-side" >
-                            <a href = <?php echo ("http://".($homeCon)->getRecentArticleContent(2));?> >
-                                <h5>Cholestrol:Healthy or Harmful? <?php echo (($homeCon)->getRecentArticleName(2));?></h5>
+                        <div class = "recentarticle-main vanish">
+                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(3));?>">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                Daily runs: a trend everyone should follow
+                            </div>
                             </a>
-                            <img src="../imgs/1800x1200_cholesterol_smarts_quiz.webp">
+                            
                             <div class="seemore_main">
-                                <div class="see_more"><a href="<?php echo ("http://".($homeCon)->getRecentArticleContent(2));?>">SEE MORE</a></div>
+                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(3));?>">SEE MORE</a></div>
                             </div>
                             
                         </div>
+                        <div class = "recentarticle-main vanish">
+                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(4));?>">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                Recent advances in Heart Medicine
+                            </div>
+                            </a>
+                            
+                            <div class="seemore_main">
+                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(4));?>">SEE MORE</a></div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class = "recentarticle-main vanish">
+                            <a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">
+                            <div class="recentarticle-img">
+                            <img src = "../imgs/wellness-mental-health.jpg" >
+                            </div>
+                            <div class="recentcaption">
+                                A random article title
+                            </div>
+                            </a>
+                            
+                            <div class="seemore_main">
+                                <div class="see_more"><a href="<?php echo ("http://".($postCon)->getRecentPostContent(5));?>">SEE MORE</a></div>
+                            </div>
+                            
+                        </div>
+                                                
                     </div>
                     
                 </div>
@@ -73,102 +138,102 @@ $homeCon = new HomeController();
                     <b>Medical Categories</b>
                 </h3>
                 <div class="seeall_main">
-                    <div class="see_all"><a href="/education">SHOW ALL</a></div>
+                    <div class="see_all"><a href="/articles">SHOW ALL</a></div>
                 </div>
                     
-                <hr>
+            <hr>
             </div> 
             
                 <div class = "topicsbox container">
                     <ul class="topicslist">
                         <div class="topicscol">
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(1) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(1) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(2) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(2)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(2) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(3) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(3)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(3) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(4) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(4)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(4) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(5) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(5)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(5) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(6) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(6)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(6) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(7) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(7)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(7) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(8) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(8)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(8) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(1) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(1) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(1)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(1) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(2) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(2)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(2) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(3) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(3)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(3) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(4) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(4)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(4) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(5) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(5)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(5) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(6) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(6)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(6) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(7) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(7)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(7) ?></h5>
                                 </a>
                             </li>
                             <li>
-                                <a <?php echo $homeCon->getCategoryContent(8) ?>>
+                                <a href ="<?php echo ("http://".$homeCon->getCategoryContent(8)) ?>">
                                     <h5>&#8827   <?php echo $homeCon->getCategoryName(8) ?></h5>
                                 </a>
                             </li>
@@ -179,6 +244,109 @@ $homeCon = new HomeController();
                 </div>
                 <br><br>
 
+            <!-- Most Viewed Section -->
+        <div style="background-color: var(--tertiary);">
+        <div class="container recentarticlessection " >
+        <div class="recentarticlesheader">
+            <h3>
+                <b>Popular Posts</b>
+            </h3>
+            <div class="seeall_main">
+                <div class="see_all"><a href="/articles">SHOW ALL</a></div>
+            </div>
+            <p>Here are the posts most viewed by visitors to our site! </p>
+            <hr>
+        </div>
+        <div class="row">
+            <div class = "recentarticle-main">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(1));?>">
+                    <div class="recentarticle-img">
+                    <img src = "../imgs/wellness-health-beauty.webp" >
+                    </div>
+                    <div class="recentcaption">
+                        A look at the effects of smoking
+                    </div>
+                    </a>
+                            
+                    <div class="seemore_main">
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(1));?>">SEE MORE</a></div>
+                    </div>    
+                    
+            
+            </div>  
+            <div class = "recentarticle-main vanish">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(2));?>">
+                    <div class="recentarticle-img">
+                    <img src = "../imgs/wellness-health-beauty.webp" >
+                    </div>
+                    <div class="recentcaption">
+                        A look at the effects of smoking
+                    </div>
+                    </a>
+                            
+                    <div class="seemore_main">
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(2));?>">SEE MORE</a></div>
+                    </div>    
+                    
+            
+            </div>
+            
+            <div class = "recentarticle-main vanish">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(3));?>">
+                    <div class="recentarticle-img">
+                    <img src = "../imgs/wellness-health-beauty.webp" >
+                    </div>
+                    <div class="recentcaption">
+                        A look at the effects of smoking
+                    </div>
+                    </a>
+                            
+                    <div class="seemore_main">
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(3));?>">SEE MORE</a></div>
+                    </div>    
+                    
+            
+            </div>
+            <div class = "recentarticle-main vanish">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(4));?>">
+                    <div class="recentarticle-img">
+                    <img src = "../imgs/wellness-health-beauty.webp" >
+                    </div>
+                    <div class="recentcaption">
+                        A look at the effects of smoking
+                    </div>
+                    </a>
+                            
+                    <div class="seemore_main">
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(4));?>">SEE MORE</a></div>
+                    </div>    
+                    
+            
+            </div>
+            <div class = "recentarticle-main vanish">
+                <a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(5));?>">
+                    <div class="recentarticle-img">
+                    <img src = "../imgs/wellness-health-beauty.webp" >
+                    </div>
+                    <div class="recentcaption">
+                        A look at the effects of smoking
+                    </div>
+                    </a>
+                            
+                    <div class="seemore_main">
+                        <div class="see_more"><a href="<?php echo ("http://".($postCon)->getMostViewedPostContent(5));?>">SEE MORE</a></div>
+                    </div>    
+                    
+            
+            </div>
+        </div>  
+    </div>
+    </div>    
+           
+
+
+
+            <!-- Introduction -->
                 <div class="container-fluid bg-light shadow">
             <h1 style="text-align: center;">Introduction</h1>
 
@@ -210,6 +378,8 @@ $homeCon = new HomeController();
             </div>
         </div>
         <br><br>
-            <?php @include 'footer.blade.php' ?>
+
+        
+        <?php @include 'Footer/footer.blade.php' ?>
         </body>
     </html>

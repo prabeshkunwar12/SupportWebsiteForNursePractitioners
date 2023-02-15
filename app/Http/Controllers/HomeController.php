@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Posts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -21,57 +22,7 @@ class HomeController extends Controller
         return view('/welcome');
     }
 
-    /**
-     * Summary of getRecentArticle
-     * @param int $num the article being retrieved. 0 is the most recent article, 1 is the second most and so on.
-     * @return mixed A recent article, defaults to most recent article if asked for article outside of range ($maxArticles),or null if no articles found
-     */
-    public function getRecentArticle(int $articleNum)
-    {
-        //Database that controller will check for the articles
-        $tableName = 'posts';
-
-        $article = null;
-        //array of collection
-        $recentArticles = DB::table($tableName)
-            ->orderBy('id','desc')
-            ->limit($articleNum+1)
-            ->get();
-
-            if($recentArticles->isNotEmpty()){
-                if($recentArticles->has($articleNum)){
-                    $article = $recentArticles[$articleNum];
-                }
-                else{
-                    $article = $recentArticles[0];
-                    }
-            } else
-                return $article;
-            
-        return $article;
-    }
-
-    public function getRecentArticleName(int $articleNum){
-
-        $article = $this->getRecentArticle($articleNum);
-
-        //if no articles found
-        if(!$article)
-            return "Default Name";
-
-        return $article->title;
-    }
-
-    public function getRecentArticleContent(int $articleNum){
-
-        $article = $this->getRecentArticle($articleNum);
-
-        //If no articles found
-        if(!$article)
-            return "Default Content";
-
-        return $article->content;
-    }
+    
     
     /**
      * Retrieves a Category from the database based on given category id
@@ -88,17 +39,14 @@ class HomeController extends Controller
         //array of collection
         $categories = DB::table($tableName)
             ->where('id', $categoryNum)
-            ->first();
+            ->get();
 
-        if ($categories) {
+        if ($categories->isNotEmpty()) {
             if($categories->has(0)){
                 $category = $categories[0];
             }
         }
 
-            
-        
-        
         return $category;
     }
 
